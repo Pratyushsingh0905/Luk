@@ -18,7 +18,7 @@ const TravelAssistant = () => {
 
     try {
       const data = { start, destination };
-      const res = await axios.post('http://localhost:5000/calculate-route', data);  // Send request to backend
+      const res = await axios.post('/api/index', data);  // Send request to backend
       setResponse(res.data.recommendations);  // Store recommendations from backend
     } catch (error) {
       console.error('Error fetching data:', error);
